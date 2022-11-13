@@ -25,7 +25,7 @@ import {
   SunIcon,
 } from "@chakra-ui/icons";
 
-const Links = ["Dashboard", "Projects", "Team"];
+const Links = ["Home", "Sobre", "Contato"];
 
 const NavLink = ({ children }) => (
   <Link
