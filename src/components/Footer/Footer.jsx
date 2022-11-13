@@ -30,6 +30,22 @@ const Logo = (props) => {
     </svg>
   );
 };
+const Links = ["Home", "Sobre", "Contato"];
+
+const NavLink = ({ children }) => (
+  <Link
+    px={2}
+    py={1}
+    rounded={"md"}
+    _hover={{
+      textDecoration: "none",
+      bg: useColorModeValue("gray.200", "gray.700"),
+    }}
+    href={"#"}
+  >
+    {children}
+  </Link>
+);
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -71,9 +87,9 @@ export default function Footer() {
       >
         <Logo />
         <Stack direction={"row"} spacing={6}>
-          <Link href={"#"}>Home</Link>
-          <Link href={"#"}>Sobre</Link>
-          <Link href={"#"}>Contato</Link>
+          {Links.map((link) => (
+            <NavLink key={link}>{link}</NavLink>
+          ))}
         </Stack>
       </Container>
 
