@@ -79,11 +79,12 @@ export default function Footer() {
     >
       <Container
         as={Stack}
-        maxW={"6xl"}
+        maxW={"10xl"}
         py={4}
         spacing={4}
         justify={"center"}
         align={"center"}
+        bg={useColorModeValue("gray.100", "gray.900")}
       >
         <Logo />
         <Stack direction={"row"} spacing={6}>
@@ -96,6 +97,7 @@ export default function Footer() {
       <Box
         borderTopWidth={1}
         borderStyle={"solid"}
+        bg={useColorModeValue("gray.100", "gray.900")}
         borderColor={useColorModeValue("gray.200", "gray.700")}
       >
         <Container
